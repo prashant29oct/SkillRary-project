@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class CoreJavaDemoVideoPage {
 	
 	@FindBy(xpath = "//h1[text()='Core Java For Selenium Training']") private WebElement pageHeader;
+	@FindBy(xpath = "a//[@class='close_cookies']") private WebElement closeCookies;
 	@FindBy(xpath = "//button[@aria-label='Play']") private WebElement playButton;
 	@FindBy(xpath = "//button[@aria-label='Pause']") private WebElement pauseButton;
 	@FindBy(xpath = "//span[text()='Add To Wishlist']") private WebElement addToWishlistButton;
@@ -18,6 +19,9 @@ public class CoreJavaDemoVideoPage {
 	
 	public WebElement getPageHeader() {
 		return pageHeader;
+	}
+	public void clickOnCloseCookies() {
+		closeCookies.click();
 	}
 	public void clickPlayButton() {
 		playButton.click();
